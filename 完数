@@ -1,0 +1,63 @@
+#题目 一个数如果恰好等于它的因子之和，这个数就称为"完数"。例如6=1＋2＋3.编程找出1000以内的所有完数。
+
+def factor(num):
+    int(num)
+    res=set()
+    for i in range(1,num):
+        if num%i==0:
+            res.add(i)
+            res.add(num/i)
+    return res
+
+for i in range(2,1001):
+    if i==sum(factor(i))-i:
+        print(i)
+
+
+'''
+def sum(integer):
+    i=2
+    list=[1,]
+    while True:
+        if integer%i==0:
+            list.append(i)
+            #print(i,end=' ')
+            integer=integer/i
+            if integer==i:
+                #print(i)
+                break
+            elif integer==1:
+                break
+        else:
+            i+=1
+    #print(list)
+    return list
+
+
+for i in range(2,1001):
+    list1=sum(i)
+    total=0
+    for j in range(len(list1)):
+        total+=list1[j]
+        if i==total:
+            print(i)
+'''
+
+'''
+def factor(num):
+    target=int(num)
+    res=set()
+    for i in range(1,num):
+        if num%i==0:
+            res.add(i)
+            res.add(num/i)
+    return res
+
+for i in range(2,1001):
+    if i==sum(factor(i))-i:
+        print(i)
+'''
+
+
+
+
